@@ -64,4 +64,7 @@ Cliente gerencia sistemas operacionais, aplicações e dados.
 
 # IaaS: Infraestrutura flexível (mais controle).
 
+_______________________________________________
+# Lab - Criação de Grupo de Recursos.
+
 Esses modelos permitem que empresas escolham o nível de gerenciamento e personalização que melhor atende às suas necessidades.
