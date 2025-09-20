@@ -68,3 +68,53 @@ _______________________________________________
 # Lab - Criação de Grupo de Recursos.
 
 Esses modelos permitem que empresas escolham o nível de gerenciamento e personalização que melhor atende às suas necessidades.
+
+1. Ferramentas de Gerenciamento
+Portal do Azure: Interface web central para gerenciar todos os serviços do Azure.
+
+Azure PowerShell & CLI: Ferramentas de linha de comando para automação e gerenciamento via script.
+
+Azure Mobile App: Permite monitorar e gerenciar recursos diretamente de um dispositivo móvel.
+
+Azure Cloud Shell: Shell baseado em navegador para trabalhar com CLI ou PowerShell, sem necessidade de instalação local.
+
+2. Núcleo da Governança: Organização de Recursos
+Hierarquia de Recursos do Azure:
+
+Grupo de Gestão (Management Group): Agrupa várias assinaturas para aplicar políticas e governança em escala.
+
+Assinatura (Subscription): Unidade lógica que agrupa recursos e define limites de faturamento.
+
+Grupo de Recursos (Resource Group): Contêiner que agrupa recursos relacionados a uma solução específica (ex: um app e seu banco de dados). Recursos existem apenas dentro de um grupo de recursos.
+
+Recurso (Resource): Instância individual de um serviço (ex: uma máquina virtual, uma conta de armazenamento).
+
+3. Controle de Acesso e Segurança (Governança)
+Azure RBAC (Role-Based Access Control): Controla quem tem acesso ao que e que ação pode realizar.
+
+Princípio: Atribuir a Função (Role) menos privilegiada necessária a um Usuário/Grupo/Identidade em um Escopo específico (assinatura, grupo de recursos, recurso).
+
+Exemplos de funções: Owner, Contributor, Reader.
+
+4. Proteção e Conformidade de Recursos (Governança)
+Azure Policy: Define e impõe regras para que os recursos estejam em conformidade com os padrões da empresa.
+
+Exemplos: Permitir apenas tipos específicos de VMs, exigir que todos os recursos estejam em uma região específica, impor o uso de discos gerenciados.
+
+Azure Blueprints: Permite empacotar e implantar um conjunto repeatável de recursos, políticas e modelos do ARM para acelerar o desenvolvimento de ambientes novos e em conformidade.
+
+Gerenciamento de Custos:
+
+Marcas (Tags): Metadados (pares chave-valor) aplicados a recursos para organizar e gerenciar custos por departamento, projeto, etc.
+
+Azure Cost Management + Billing: Ferramenta para monitorar, analisar e otimizar os gastos na nuvem.
+
+5. Monitoramento e Diagnóstico (Gerenciamento)
+Azure Monitor: Serviço central para coletar, analisar e agir sobre dados de telemetria (métricas e logs) de seus recursos.
+
+Azure Advisor: Fornece recomendações personalizadas para otimizar seus recursos (alta disponibilidade, segurança, desempenho, custo).
+
+Azure Service Health: Oferece visibilidade sobre a saúde dos serviços e regiões do Azure que afetam seus recursos. Inclui status de serviço, manutenção planejada e avisos de avaria.
+
+6. Implantação de Recursos (Gerenciamento)
+ARM Templates (Azure Resource Manager Templates): Arquivos JSON que definem a infraestrutura e a configuração do projeto de forma declarativa (Infraestrutura como Código - IaC). Permite implantar recursos de maneira consistente e repetida.
