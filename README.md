@@ -69,6 +69,93 @@ _______________________________________________
 
 Esses modelos permitem que empresas escolham o nível de gerenciamento e personalização que melhor atende às suas necessidades.
 
+# Arquitetura e Serviços na Azure (Resumo para AZ-900)
+## 1. Estrutura Hierárquica da Azure (Governança e Gerenciamento)
+Conta Azure: Associada a uma pessoa/empresa (e-mail) e usada para acessar o portal.
+
+Tenant (Locatário Azure AD): Representa uma organização. Centraliza a identidade e gestão de usuários.
+
+Subscription (Assinatura): Unidade lógica para agrupar recursos, faturamento e limites. Tudo é vinculado a uma assinatura.
+
+Management Groups (Grupos de Gestão): Organizam assinaturas para aplicar políticas (governança) e controle de acesso em escala.
+
+Resource Groups (Grupos de Recursos): Contêineres lógicos que agrupam recursos relacionados a uma solução específica (ex: um app e seu banco de dados). Região é a única característica obrigatória definida no recurso, não no grupo de recursos.
+
+## 2. Conceitos Fundamentais de Computação
+Azure Virtual Machines (VMs): Serviço de IaaS (Infraestrutura como Serviço). Oferece controle total sobre o SO e o software.
+
+Azure App Service: Serviço de PaaS (Plataforma como Serviço) para hospedar aplicações web, APIs e back-ends móveis sem gerir infraestrutura.
+
+Azure Container Instances (ACI): Maneira mais simples e rápida de executar contêineres sem gerenciar servidores.
+
+Azure Kubernetes Service (AKS): Serviço de orquestração de contêineres para implantar e gerenciar aplicações em contêineres complexas.
+
+Azure Functions: Serviço de computação serverless (sem servidor) para executar código sob demanda (por evento) sem provisionar infraestrutura.
+
+## 3. Conceitos Fundamentais de Rede
+Azure Virtual Network (VNet): Bloco fundamental para redes privadas e seguras na Azure. Isola e protege os recursos.
+
+VPN Gateway: Conecta redes locais (on-premises) à VNet de forma segura através de uma VPN.
+
+Azure ExpressRoute: Estabelece uma conexão privada e dedicada entre sua rede local e a Azure (mais rápida e confiável que VPN).
+
+Azure Load Balancer: Distribui o tráfego de entrada entre recursos (máquinas) para garantir alta disponibilidade e desempenho (Camada 4 - TCP/UDP).
+
+Application Gateway: Balanceador de carga para aplicações web (Camada 7 - HTTP/HTTPS), com funcionalidades como WAF (Firewall de Aplicação Web).
+
+## 4. Conceitos Fundamentais de Armazenamento
+Azure Blob Storage: Armazena grandes quantidades de dados não estruturados (ex: textos, imagens, vídeos, backups).
+
+Azure Files: Oferece compartilhamentos de arquivos totalmente gerenciados na nuvem, acessíveis via protocolo SMB (como um file server).
+
+Azure Disk Storage: Discos virtuais (HDs/SSDs) para uso com Azure Virtual Machines.
+
+Tiers (Camadas de Acesso): Para otimizar custos (ex: no Blob Storage):
+
+Hot: Acesso frequente.
+
+Cool: Acesso infrequente (armazenamento mais barato, acesso um pouco mais caro).
+
+Archive: Acesso raríssimo (mais barato, latência de recuperação de horas).
+
+## 5. Conceitos Fundamentais de Banco de Dados
+Azure Cosmos DB: Banco de dados NoSQL globalmente distribuído com baixa latência garantida. Oferece vários modelos de API (SQL, MongoDB, Cassandra, etc.).
+
+Azure SQL Database: Banco de dados relacional (SQL) totalmente gerenciado (PaaS). Não requer gerenciamento de VM ou SO.
+
+Azure Database for MySQL/PostgreSQL: Serviços de banco de dados relacionais de código aberto totalmente gerenciados.
+
+## 6. Conceitos de Segurança e Identidade
+Azure Active Directory (Azure AD): Serviço de identidade e gerenciamento de acesso baseado em nuvem.
+
+SSO (Single Sign-On): Acesso único a vários aplicativos.
+
+MFA (Multi-Factor Authentication): Autenticação em duas etapas.
+
+Azure Security Center (agora parte do Microsoft Defender for Cloud): Fornece visibilidade e recomendações para fortalecer a segurança de seus recursos.
+
+Azure Key Vault: Armazena e gerencia segredos (senhas, cadeias de conexão) e chaves criptográficas de forma segura.
+
+## 7. Conceitos de Monitoramento e Governança
+Azure Monitor: Serviço centralizado para coletar, analisar e agir sobre dados de telemetria (métricas e logs) de seus recursos.
+
+Azure Advisor: Analisa sua configuração e uso e fornece recomendações personalizadas para otimizar custos, desempenho, segurança e confiabilidade.
+
+Azure Policy: Define e aplica regras para seus recursos, garantindo a conformidade com os padrões de governança corporativa.
+
+Azure Resource Manager (ARM): A API e o mecanismo por trás da implantação e gestão de todos os recursos. Permite implantar modelos (ARM templates) de forma declarativa.
+
+## 8. Modelos de Nuvem (Crucial para a prova!)
+IaaS (Infraestrutura como Serviço): Aluga infraestrutura (VMs, redes, armazenamento). Você gerencia o SO e aplicações. (Ex: Azure VMs)
+
+PaaS (Plataforma como Serviço): Aluga uma plataforma para desenvolver e executar aplicações. Você gerencia apenas o código e os dados. A Azure gerencia o resto. (Ex: Azure App Service, Azure SQL Database)
+
+SaaS (Software como Serviço): Consome um aplicativo completo rodando na nuvem. (Ex: Microsoft 365, Outlook)
+
+Serverless (Sem Servidor): Foca apenas em fragmentos de código (funções). A plataforma escala automaticamente e você paga apenas pelo tempo de execução. (Ex: Azure Functions)
+
+
+
 # Gerenciamento e Governança no Azure (AZ-900)
 
 ## 1. Ferramentas de Gerenciamento
